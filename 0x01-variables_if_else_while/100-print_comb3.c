@@ -9,29 +9,28 @@
  *
  *Return: Always 0 (Success)
  */
+
 int main(void)
 {
-	int x, y;
+	int x, y, z;
 
+	z='1'
 	for (x = '0' ; x <= '9' ; x++)
 	{
-		for (y = '0' ; y <= '9' ; y++)
+		for (y = 'z' ; y <= '9' ; y++)
 		{
-			if (x != y)
+			putchar(x);
+			putchar(y);
+			if((x == '9') && (y=='8'))
 			{
-				putchar(x);
-				putchar(y);
-				if((x == '9') && (y=='8'))
-				{
-					putchar('\n');
-				}
-				else
-				{
-					putchar(',');
-					putchar(' ');
-				}
+				putchar('\n');
 			}
-       		}
+			else
+			{
+				putchar(',');
+				putchar(' ');
+			}
+		}
 	}
 	return (0);
 }
