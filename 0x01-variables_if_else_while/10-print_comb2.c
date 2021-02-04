@@ -1,4 +1,4 @@
-include <stdlib.h>
+#include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
@@ -11,18 +11,18 @@ include <stdlib.h>
  */
 int main(void)
 {
-        int x;
+	int x;
 
-        for (x = '00' ; x <= '99' ; x++)
-        {
-                putchar(x);
+	for (x = '00' ; x <= '99' ; x++)
+	{
+		putchar(x);
 
-                if (x != '9')
-                {
+		if (x != '9')
+		{
 			putchar(',');
 			putchar(' ');
-                }
-        }
-        putchar('\n');
-        return (0);
+		}
+	}
+	putchar('\n');
+	return (0);
 }
