@@ -22,7 +22,7 @@ int main(void)
 			putchar(x);
 			putchar(y);
 
-			if((x == '8') && (y=='9'))
+			if ((x == '8') && (y=='9'))
 			{
 				putchar('\n');
 			}
@@ -32,7 +32,7 @@ int main(void)
 				putchar(' ');
 			}
 		}
-		z++;
+	z++;
 	}
 	return (0);
 }
