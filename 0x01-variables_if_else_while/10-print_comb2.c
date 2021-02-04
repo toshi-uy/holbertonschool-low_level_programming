@@ -11,18 +11,25 @@
  */
 int main(void)
 {
-	int x;
+	int x, y;
 
-	for (x = '00' ; x <= '99' ; x++)
+	for (x = '0' ; x <= '9' ; x++)
 	{
-		putchar(x);
-
-		if (x != '9')
+		for (y = '0' ; y <= '9' ; y++)
 		{
-			putchar(',');
-			putchar(' ');
+			putchar(x);
+			putchar(y);
+
+			if ((x == '9') && (y == '9'))
+			{
+				putchar('\n');
+			}
+			else
+			{
+				putchar(',');
+				putchar(' ');
+			}
 		}
 	}
-	putchar('\n');
 	return (0);
 }
