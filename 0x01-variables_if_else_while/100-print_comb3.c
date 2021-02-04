@@ -14,13 +14,14 @@ int main(void)
 {
 	int x, y, z;
 
-	z='1'
+	z = '1';
 	for (x = '0' ; x <= '9' ; x++)
 	{
 		for (y = 'z' ; y <= '9' ; y++)
 		{
 			putchar(x);
 			putchar(y);
+
 			if((x == '8') && (y=='9'))
 			{
 				putchar('\n');
@@ -31,6 +32,7 @@ int main(void)
 				putchar(' ');
 			}
 		}
+		z++;
 	}
 	return (0);
 }
