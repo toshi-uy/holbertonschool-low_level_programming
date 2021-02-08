@@ -6,7 +6,7 @@
  *
  * Return: Always 0.
  */
-int print_alphabet(void)
+void print_alphabet(void)
 {	char az;
 
     	for (az = 'a' ; az <= 'z' ; az++)
@@ -14,5 +14,4 @@ int print_alphabet(void)
 	_putchar(az);
 	}
 	_putchar('\n');
-    return (0);
 }
