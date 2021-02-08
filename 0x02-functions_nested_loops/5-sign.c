@@ -1,23 +1,23 @@
-#include "holberton.h"
+B#include "holberton.h"
 
 /**
- * _isalpha - checks for alpha character
- * @c: parameter c checks if character is lowercase
+ * print_sign - checks for signs
+ * @n: parameter n checks if character +,-,0
  *
- * Description: checks if parameter (int c) is a lowercase character
+ * Description: checks if parameter (int n) is a +,-,0
  *
  * Return: Always 0.
  */
 
 int print_sign(int n)
 {
-        if (n > 0)
+	if (n > 0)
 	{
-                _putchar('+');
+		_putchar('+');
 		return (1);
 	}
 	else
-		if(n == 0)
+		if (n == 0)
 		{
 			_putchar('0');
 			return (0);
