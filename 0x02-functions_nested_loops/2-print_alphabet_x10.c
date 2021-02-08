@@ -2,7 +2,9 @@
 #include <stdio.h>
 
 /**
- * main - check the code for Holberton School students.
+ * print_alphabet_x10 - x10
+ *
+ *Description: prints the alphabert 10 times
  *
  * Return: Always 0.
  */

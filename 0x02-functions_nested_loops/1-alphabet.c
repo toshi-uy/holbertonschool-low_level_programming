@@ -2,16 +2,20 @@
 #include <stdio.h>
 
 /**
- * main - check the code for Holberton School students.
+ *print_alphabet - Entry point
  *
- * Return: Always 0.
+ *Description: Prints alphabet
+ *
+ *Return: Always 0 (Success)
  */
-void print_alphabet(void)
-{	char az;
 
-    	for (az = 'a' ; az <= 'z' ; az++)
+void print_alphabet(void)
+{
+	char az;
+
+	for (az = 'a' ; az <= 'z' ; az++)
 	{
-	_putchar(az);
+		_putchar(az);
 	}
 	_putchar('\n');
 }
