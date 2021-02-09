@@ -10,10 +10,9 @@ int main(void)
 	int i;
 
 	printf("Infinite loop incoming :(\n");
-
+	/* never increments so it will always be less than 10 */
 	i = 0;
 	while (i < 10)
-/* This while is always going to be true, infinit loop */
 	{
 		putchar(i);
 	}
