@@ -10,13 +10,15 @@ void num_chico(int mul, int y)
 {
 	if (y != 9)
 	{
+		if (y != 0)
+			_putchar(' ');
 		_putchar('0' + mul);
 		_putchar(',');
-		_putchar(' ');
 		_putchar(' ');
 	}
 	else
 	{
+		_putchar(' ');
 		_putchar('0' + mul);
 		_putchar('\n');
 	}
