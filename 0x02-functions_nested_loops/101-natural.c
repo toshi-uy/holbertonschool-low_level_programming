@@ -10,7 +10,7 @@
  */
 int main(void)
 {
-	int x, y;
+	int x, y = 0;
 
 	for (y = 1 ; y < 1024 ; y++)
 		if (((y % 3) == 0) || ((y % 5) == 0))
