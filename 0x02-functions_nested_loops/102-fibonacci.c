@@ -11,10 +11,10 @@ void printFibonacciNumbers(int n)
 
 	if (n < 1)
 		return;
-	printf("%d ", f1);
+	printf("%d, ", f1);
 	for (i = 1; i < n; i++)
 	{
-		printf("%d ", f2);
+		printf("%d, ", f2);
 
 		int next = f1 + f2;
 
