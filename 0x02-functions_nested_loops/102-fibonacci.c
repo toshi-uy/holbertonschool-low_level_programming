@@ -10,7 +10,7 @@ int main(void)
 {
 	int i, t1 = 0, t2 = 1, nextTerm;
 
-	for (i = 1; i <= n; ++i)
+	for (i = 1; i <= 50; ++i)
 	{
 		if (i != 50)
 			printf("%d, ", t1);
