@@ -12,7 +12,7 @@ int main(void)
 {
 	int x, y;
 
-	for (y = 1023 ; y >= 1 ; y--)
+	for (y = 1 ; y <= 1023 ; y++)
 		if (((y % 3) == 0) || ((y % 5) == 0))
 			x = x + y;
 	printf("%d", x);
