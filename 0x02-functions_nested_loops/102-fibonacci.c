@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "holberton.h"
 /**
  *main - Entry point
  *
@@ -8,7 +9,7 @@
  */
 int main(void)
 {
-	int i, t1 = 1, t2 = 2, nextTerm;
+	long int i, t1 = 1, t2 = 2, nextTerm;
 
 	for (i = 1; i <= 50; i++)
 	{
