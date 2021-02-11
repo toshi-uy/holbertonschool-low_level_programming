@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "holberton.h"
 /**
  *main - Entry point
@@ -7,6 +6,7 @@
  *
  *Return: Always 0 (Success)
  */
+
 int main(void)
 {
 	long int i, t1 = 1, t2 = 2, nextTerm;
@@ -14,9 +14,9 @@ int main(void)
 	for (i = 1; i <= 50; i++)
 	{
 		if (i != 50)
-			printf("%d, ", t1);
+			printf("%ld, ", t1);
 		else
-			printf("%d", t1);
+			printf("%ld", t1);
 		nextTerm = t1 + t2;
 		t1 = t2;
 		t2 = nextTerm;
