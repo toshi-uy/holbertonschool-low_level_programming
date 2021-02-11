@@ -2,7 +2,7 @@
 /**
  *main - Entry point
  *
- *Description: Positive anything is better than negative nothing
+ *Description: Fibonacci numbers
  *
  *Return: Always 0 (Success)
  */
