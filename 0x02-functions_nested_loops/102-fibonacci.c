@@ -6,9 +6,9 @@
  *
  *Return: Always 0 (Success)
  */
-long int main(void)
+int main(void)
 {
-	int i, t1 = 1, t2 = 2, nextTerm;
+	long int i, t1 = 1, t2 = 2, nextTerm;
 
 	for (i = 1; i <= 50; i++)
 	{
