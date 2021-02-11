@@ -15,8 +15,8 @@ int main(void)
 	for (y = 1 ; y < 1024 ; y++)
 		if (((y % 3) == 0) || ((y % 5) == 0))
 		{
-			x = 0;
 			x = (x + y);
+			x = 0;
 		}
 			printf("%d", x);
 			printf("\n");
