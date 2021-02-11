@@ -6,7 +6,7 @@
  *
  *Return: Always 0 (Success)
  */
-int main(void)
+long int main(void)
 {
 	int i, t1 = 1, t2 = 2, nextTerm;
 
