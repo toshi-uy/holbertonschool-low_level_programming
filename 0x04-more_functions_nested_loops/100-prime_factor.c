@@ -15,6 +15,6 @@ int main(void)
 	for (p = 2; p < n; p++)
 		if (n % p == 0)
 			n = n / p;
-	printf("%ld\n", );
+	printf("%ld\n", p);
 	return (0);
 }
