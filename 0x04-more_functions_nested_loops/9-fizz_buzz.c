@@ -5,7 +5,7 @@
  *
  *Description: prints the alphabert 10 times
  *
- *Return (0) Success
+ *Return: Always 0 (Success)
  */
 int main(void)
 {
