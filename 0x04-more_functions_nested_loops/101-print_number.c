@@ -1,4 +1,4 @@
-#include "holberton.h"
+B#include "holberton.h"
 
 /**
  * print_number - checks for uppercase character.
@@ -9,14 +9,14 @@
  */
 void print_number(int n)
 {
-	unsigned int x;
+	int x;
 
 	if (n < 0)
-        {
-                _putchar('-');
-                x = -n;
-        }
-        else
+	{
+		_putchar('-');
+		x = -n;
+	}
+	else
 		x = n;
 	if (x / 10 != 0)
 	{
