@@ -6,16 +6,16 @@
  *
  * Description: counts string characters
  *
- * Return: Count.
+ * Return: Count
  */
+
 int _strlen(char *s)
 {
-	char count = 0;
+	int count = 0;
 
-	while (*s != '\0')
+	while (*(s + count))
 	{
 		count++;
-		s++;
 	}
 	return (count);
 }
