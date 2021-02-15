@@ -6,6 +6,7 @@
  * Description: checks if parameter (int c) is digit
  *
  */
+
 void _puts(char *str)
 {
 	while (*str != '\0')
