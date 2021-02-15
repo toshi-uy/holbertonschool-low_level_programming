@@ -8,6 +8,7 @@
  *
  * Return: Count.
  */
+
 int _strlen(char *s)
 {
 	char count = 0;
