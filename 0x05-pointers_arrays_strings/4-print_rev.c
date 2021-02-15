@@ -18,7 +18,7 @@ int _strlen(char *s)
 		count++;
 		s++;
 	}
-	return (count);
+	return(count);
 }
 
 /**
@@ -34,8 +34,7 @@ void print_rev(char *s)
 	int length, a;
 
 	length = _strlen(s);
-	a = *s;
-
+	
 	for (a = (length - 1) ; a >= 0 ; a--)
 	{
 		_putchar(*(s + a));
