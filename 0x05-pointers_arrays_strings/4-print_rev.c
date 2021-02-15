@@ -8,6 +8,7 @@
  *
  *  Return: Count.
  */
+
 int _strlen(char *s)
 {
 	char count = 0;
@@ -27,6 +28,7 @@ int _strlen(char *s)
  * Description: prints strings on reverse
  *
  */
+
 void print_rev(char *s)
 {
 	int length, a;
