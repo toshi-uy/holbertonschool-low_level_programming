@@ -4,7 +4,7 @@
  * @s: parameter s
  *
  * Description: counts string characters
- *
+ * Return: count.
  */
 
 int _strlen(char *s)
@@ -20,7 +20,7 @@ int _strlen(char *s)
 
 /**
  * puts_half - half
- * @*str: parameter str
+ * @str: parameter str
  * Description: checks if parameter (int c) is digit
  *
  */
