@@ -34,7 +34,7 @@ void print_rev(char *s)
 	int length, a;
 
 	length = _strlen(s);
-	
+
 	for (a = (length - 1) ; a >= 0 ; a--)
 	{
 		_putchar(*(s + a));
