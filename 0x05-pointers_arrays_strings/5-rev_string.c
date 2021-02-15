@@ -6,17 +6,18 @@
  *
  * Description: counts string characters
  *
+ * Return: Count.
  */
 int _strlen(char *s)
 {
-        char count = 0;
+	char count = 0;
 
-        while (*s != '\0')
-        {
-                count++;
-                s++;
-        }
-        return (count);
+	while (*s != '\0')
+	{
+		count++;
+		s++;
+	}
+	return (count);
 }
 
 /**
@@ -28,20 +29,20 @@ int _strlen(char *s)
  */
 void rev_string(char *s)
 {
-        char *start = s;
-        char *end = start + _strlen(s) - 1;
-        char temp;
+	char *start = s;
+	char *end = start + _strlen(s) - 1;
+	char temp;
 
-        if (s == 0)
-        {
-                return;
-        }
-        while (end > start)
-        {
-                temp = *start;
-                *start = *end;
-                *end = temp;
-                ++start;
-                --end;
-        }
+	if (s == 0)
+	{
+		return;
+	}
+	while (end > start)
+	{
+		temp = *start;
+		*start = *end;
+		*end = temp;
+		++start;
+		--end;
+	}
 }

@@ -6,6 +6,7 @@
  *
  * Description: counts string characters
  *
+ * Return: Count.
  */
 int _strlen(char *s)
 {

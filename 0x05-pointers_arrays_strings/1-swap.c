@@ -1,8 +1,8 @@
 #include "holberton.h"
 /**
  * swap_int - swaps parameters
- * @*a: parameter of pointer a
- * @*b: parameter of pointer b
+ * @a: parameter of pointer a
+ * @b: parameter of pointer b
  *
  * Description: swaps two values
  *

@@ -2,7 +2,7 @@
 
 /**
  * _puts - checks for digits
- * @*str: parameter str
+ * @str: parameter str
  * Description: checks if parameter (int c) is digit
  *
  */

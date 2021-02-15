@@ -6,6 +6,7 @@
  *
  * Description: counts string characters
  *
+ *  Return: Count.
  */
 int _strlen(char *s)
 {
@@ -33,7 +34,7 @@ void print_rev(char *s)
 	length = _strlen(s);
 	a = *s;
 
-	for (a = (length -1) ; a >= 0 ; a--)
+	for (a = (length - 1) ; a >= 0 ; a--)
 	{
 		_putchar(*(s + a));
 	}
