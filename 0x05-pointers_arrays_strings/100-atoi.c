@@ -6,7 +6,7 @@
  *
  * Description: convert a string to an integer
  *
- * Return : num * sign
+ * Return: num * sign
  */
 
 int _atoi(char *s)
