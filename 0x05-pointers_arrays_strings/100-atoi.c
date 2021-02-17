@@ -2,10 +2,11 @@
 
 /**
  * _atoi - convert a string to an integer
- * @a: parameter of pointer s
+ * @s: parameter of pointer s
  *
  * Description: convert a string to an integer
  *
+ * Return : num * sign
  */
 
 int _atoi(char *s)
