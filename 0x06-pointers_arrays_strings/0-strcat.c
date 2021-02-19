@@ -11,31 +11,15 @@
 
 char *_strcat(char *dest, char *src)
 {
-	char *ptr = dest + _strlen(dest);
+	int i, j;
 
-	while  (*src != '\0')
-		*ptr++ = *src++;
-	*ptr = '\0';
-
-	return (dest);
-}
-
-/**
- * _strlen - counts strings
- * @s: parameter s
- *
- * Description: counts string characters
- *
- * Return: Count
- */
-
-int _strlen(char *s)
-{
-	int count = 0;
-
-	while (*(s + count))
+	for (i = 0; dest[i] != '\0'; i++)
 	{
-		count++;
 	}
-	return (count);
+	for (j = 0; src[j] != '\0'; j++)
+	{
+		dest[i + j] = src[j];
+	}
+	dest[i + j] = '\0';
+	return (dest);
 }
