@@ -5,7 +5,7 @@
  * @haystack: destination parameter
  * @needle: source parameter
  *
- * Return: a pointer to the resulting string dest
+ * Return: a pointer to the resulting string dest and 0
  *
  */
 
