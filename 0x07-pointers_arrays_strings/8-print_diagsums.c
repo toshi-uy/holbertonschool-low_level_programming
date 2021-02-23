@@ -1,11 +1,11 @@
 #include "holberton.h"
 
 /**
- * _strstr - Entry point
- * @haystack: destination parameter
- * @needle: source parameter
+ * print_diagsums - Entry point
+ * @a: destination parameter
+ * @size: source parameter
  *
- * Return: a pointer to the resulting string dest and 0
+ * Description: a pointer to the resulting string dest and 0
  *
  */
 
