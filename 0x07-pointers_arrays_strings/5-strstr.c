@@ -37,5 +37,7 @@ char *_strstr(char *haystack, char *needle)
 		return ('\0');
 	else if (b == 1)
 		return (p1 + i - j);
+	if (p2 == '\0' || p1 == '\0')
+		return ('\0');
 	return (0);
 }
