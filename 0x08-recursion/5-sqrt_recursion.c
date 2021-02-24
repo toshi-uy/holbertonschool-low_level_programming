@@ -11,16 +11,12 @@
 
 int recursion(int x, int y)
 {
-	int i = y * y;
-
-	if (i < x)
-	{
-		return (recursion(x, y + 1));
-	}
-	if (i == x)
+	if (y * y > x)
+                return (-1);
+	if (y * y == x)
 		return (y);
 	else
-		return (-1);
+		return (recursion(x, y + 1));
 }
 
 /**
@@ -33,5 +29,5 @@ int recursion(int x, int y)
 
 int _sqrt_recursion(int n)
 {
-	return (recursion(n, 0));
+	return (recursion(n, 1));
 }
