@@ -1,4 +1,5 @@
-#include "holberton.h"
+B#include "holberton.h"
+
 /**
  * _strlen_recursion - returns the length of a string
  * @s: destination parameter
@@ -33,8 +34,7 @@ int isPalRec(char *s, int i, int j)
 	if (s[i] != s[j])
 		return (0);
 	if (i < j + 1)
-		return isPalRec(s, i + 1, j - 1);
-
+		return (isPalRec(s, i + 1, j - 1));
 	return (1);
 }
 
@@ -49,6 +49,7 @@ int isPalRec(char *s, int i, int j)
 int is_palindrome(char *s)
 {
 	int n = _strlen_recursion(s);
+
 	if (n == 0)
 		return (1);
 	return (isPalRec(s, 0, n - 1));
