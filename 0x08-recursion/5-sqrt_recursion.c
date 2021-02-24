@@ -15,7 +15,7 @@ int recursion(int x, int y)
 
 	if (i < x)
 	{
-		return (recursion(x, y - 1));
+		return (recursion(x, y + 1));
 	}
 	if (i == x)
 		return (x);
