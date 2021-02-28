@@ -24,7 +24,7 @@ int main(int argc, char **argv)
 	for (count = 1 ; count < argc ; count++)
 	{
 		p = argv[count];
-		for (count1 = 0 ; p[count1] !=0 ; count1++)
+		for (count1 = 0 ; p[count1] != 0 ; count1++)
 			if (isdigit(p[count1]) == 0)
 			{
 				printf("Error\n");
