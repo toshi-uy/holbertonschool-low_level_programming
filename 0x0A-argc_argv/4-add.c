@@ -17,10 +17,6 @@ int main(int argc, char **argv)
 	int count, count1, sum = 0;
 	char *p;
 
-	if (argc < 2)
-	{
-		printf("0\n");
-	}
 	for (count = 1 ; count < argc ; count++)
 	{
 		p = argv[count];
