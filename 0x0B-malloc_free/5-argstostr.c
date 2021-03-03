@@ -1,3 +1,5 @@
+#include "holberton.h"
+
 /**
  * _strlen - counts strings
  * @s: parameter s
