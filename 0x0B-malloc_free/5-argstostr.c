@@ -1,26 +1,6 @@
 #include "holberton.h"
 
 /**
- * _strlen - counts strings
- * @s: parameter s
- *
- * Description: counts string characters
- *
- * Return: Count
- */
-
-int _strlen(char *s)
-{
-	int count = 0;
-
-	while (*(s + count))
-	{
-		count++;
-	}
-	return (count);
-}
-
-/**
  * argstostr - concatenates all the arguments of your program
  * @ac: parameter s1
  * @av: parameter s2
@@ -30,31 +10,37 @@ int _strlen(char *s)
  * Return: point to a newly allocated space in memory
  */
 
+
 char *argstostr(int ac, char **av)
 {
-	char *p;
-	int cont = 0, i = 0, j = 0, k = 0;
+	int i, j;
+	int l = 0;
+	int cont = 0;
+	char *array;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
-	for (i = 0 ; i < ac ; i++)
-	{
-		cont += _strlen(av[i]);
-		cont++;
-	}
 
-	p = malloc(sizeof(char) * cont);
-	if (p == NULL)
-		return (NULL);
-	for (i = 0 ; i < ac ; i++)
+	for (i = 0; i < ac; i++)
 	{
-		for (j = 0 ; av[i][j] != '\0' ; j++)
+		for (j = 0; av[i][j] != '\0'; j++)
 		{
-			p[k] = av[i][j];
-			k++;
+			cont++;
 		}
-		p[k] = '\n';
-		k++;
 	}
-	return (p);
+	cont = cont + ac;
+	array = (char  *)malloc(cont * sizeof(char) + 1);
+	if (array == NULL)
+	{
+		return (NULL);
+	}
+	for (i = 0; i < ac; i++)
+	{
+		for (j = 0; av[i][j] != '\0'; j++, l++)
+		{
+			array[l] = av[i][j];
+		}
+		array[l++] = '\n';
+	}
+	return (array);
 }
