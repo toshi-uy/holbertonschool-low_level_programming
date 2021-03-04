@@ -1,13 +1,14 @@
 #include "holberton.h"
 
 /**
- * array_range - Entry point
- * @min: parameter
- * @max: parameter
+ * _realloc - Entry point
+ * @ptr: parameter
+ * @old_size: parameter
+ * @new_size: parameter
  *
  * Description: function that creates an array of integers
  *
- * Return: the pointer to the newly created array
+ * Return: the pointer to the newly created space in memory
  */
 
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
@@ -34,7 +35,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	{
 		new = malloc(new_size);
 		if (new == NULL)
-                        return (NULL);
+			return (NULL);
 		for (i = 0; i < old_size; i++)
 			new[i] = PTR[i];
 		free(PTR);
