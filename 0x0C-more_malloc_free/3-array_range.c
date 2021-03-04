@@ -1,12 +1,13 @@
 #include "holberton.h"
 
 /**
- * _strlen - counts strings
- * @s: parameter s
+ * array_range - Entry point
+ * @min: parameter
+ * @max: parameter
  *
- * Description: counts string characters
+ * Description: function that creates an array of integers
  *
- * Return: Count
+ * Return: the pointer to the newly created array
  */
 
 int *array_range(int min, int max)
@@ -17,6 +18,8 @@ int *array_range(int min, int max)
 	if (min > max)
 		return (NULL);
 	p = malloc(sizeof(int) * length);
+	if (p == NULL)
+		return (NULL);
 	for (i = 0 ; min <= max ; min++, i++)
 		p[i] = min;
 	return (p);
