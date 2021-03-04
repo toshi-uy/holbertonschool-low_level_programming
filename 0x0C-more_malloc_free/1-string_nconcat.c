@@ -45,7 +45,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		p[i] = s1[i];
 	if (n > _strlen(s2))
 		n = _strlen(s2);
-	for (j = 0 ; j < n ; j++)
+	for (j = 0 ; j <= n ; j++)
 	{
 		p[i + j] = s2[j];
 	}
