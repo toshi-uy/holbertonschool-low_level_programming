@@ -1,5 +1,5 @@
 #include "dog.h"
-
+#include <stdlib.h>
 /**
  * free_dog - Entry point
  * @d: parameter
@@ -12,8 +12,8 @@ void free_dog(dog_t *d)
 {
 	if (d)
 	{
-		free(name);
-		free(owner);
+		free(d->name);
+		free(d->owner);
 		free(d);
 	}
 }
