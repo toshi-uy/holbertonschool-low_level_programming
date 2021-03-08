@@ -48,11 +48,12 @@ char *_strdup(char *str)
 }
 
 /**
- * struct my_struct - Short description
- * @a: First member
- * @b: Second member
+ * new_dog - Short description
+ * @name: First member
+ * @age: Second member
+ * @owner: third memeber
  *
- * Description: Longer description
+ * Return: Longer description
  */
 
 dog_t *new_dog(char *name, float age, char *owner)
@@ -66,13 +67,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (new_dog == NULL)
 		return (NULL);
 	name_copy = _strdup(name);
-        owner_copy = _strdup(owner);
-        if (name_copy == NULL || owner_copy == NULL)
+	owner_copy = _strdup(owner);
+	if (name_copy == NULL || owner_copy == NULL)
 	{
-		free (owner_copy);
-		free (name_copy);
-		free (new_dog);
-		reutrn (NULL);
+		free(owner_copy);
+		free(name_copy);
+		free(new_dog);
+		return (NULL);
 	}
 
 	new_dog->name = name_copy;
