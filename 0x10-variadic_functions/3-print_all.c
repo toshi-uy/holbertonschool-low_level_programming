@@ -1,4 +1,4 @@
-#include "variadic_functions.h"
+B#include "variadic_functions.h"
 
 /**
  * print_char - prints chars
@@ -47,6 +47,7 @@ void print_string(va_list print)
 	if (chequeo == NULL)
 	{
 		printf("(nil)");
+		return (0);
 	}
 	printf("%s", chequeo);
 }
