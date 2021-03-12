@@ -19,7 +19,7 @@ void print_char(va_list print)
 
 void print_int(va_list print)
 {
-        printf("%d", va_arg(print, int));
+	printf("%d", va_arg(print, int));
 }
 
 /**
@@ -51,6 +51,11 @@ void print_string(va_list print)
 	printf("%s", chequeo);
 }
 
+/**
+ * print_all - prints all
+ * @format: parameter format
+ * Return nothing
+ */
 void print_all(const char * const format, ...)
 {
 	int i = 0, j = 0;
