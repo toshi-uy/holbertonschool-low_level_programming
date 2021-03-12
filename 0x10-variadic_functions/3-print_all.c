@@ -47,7 +47,7 @@ void print_string(va_list print)
 	if (chequeo == NULL)
 	{
 		printf("(nil)");
-		return (0);
+		return;
 	}
 	printf("%s", chequeo);
 }
