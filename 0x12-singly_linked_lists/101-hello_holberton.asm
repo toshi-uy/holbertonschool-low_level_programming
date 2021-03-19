@@ -1,16 +1,21 @@
-        SECTION .data
-msg:	    db "Hello, Holberton",10, 0 ; message to print
-fmt:	    db "%s", 0
+extern	printf			; the C function, to be called
 
-	        SECTION .text
-	        extern printf
-	        global main
-main:
-	        mov esi, msg    ; passing order starts w/ edi, esi, ...
-	        mov edi, fmt    ;
-	        mov eax, 0      ; printf counts # of non-integer arguments
-	        call printf
+	        section .data	; Data section, initialized variables
+msg:		db "Hello, Holberton", 10, 0 ; C string needs 0
+fmt:	    	db "%s", 0          ; The printf format, "\n",'0'
 
-	        mov ebx, 0      ; normal-exit code
-	        mov eax, 1      ; process-termination service
-	        int 0x80        ; linux kernel service
+	        section .text	; Code section.
+
+	        global main	; the standard gcc entry point
+main:				; the program label for the entry point
+	        push    rbp	; set up stack frame, must be alligned
+
+	mov	rdi,fmt
+	mov	rsi,msg
+	mov	rax,0		; or can be  xor  rax,rax
+	        call    printf	; Call C function
+
+	pop	rbp		; restore stack
+
+	mov	rax,0		; normal, no error, return value
+	ret			; return
