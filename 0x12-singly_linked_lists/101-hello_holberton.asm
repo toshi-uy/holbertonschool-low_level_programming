@@ -4,7 +4,7 @@ fmt:	    db "%s", 0
 
 	        SECTION .text
 	        extern printf
-	        global main, _start
+	        global main
 main:
 	        mov esi, msg    ; passing order starts w/ edi, esi, ...
 	        mov edi, fmt    ;
