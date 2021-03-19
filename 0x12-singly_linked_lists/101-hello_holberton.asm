@@ -1,6 +1,6 @@
         SECTION .data
-msg:	    db "Hello, Holberton",0 ; message to print
-fmt:	    db "%s", 10, 0
+msg:	    db "Hello, Holberton",10, 0 ; message to print
+fmt:	    db "%s", 0
 
 	        SECTION .text
 	        extern printf
