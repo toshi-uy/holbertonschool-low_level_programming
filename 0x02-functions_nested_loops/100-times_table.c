@@ -20,6 +20,7 @@ void print_number(int n)
 /**
  * print_small - part of the code
  * @mul: i * j
+ * @n: description for n.
  * @j: parameter j
  * Description: prints numbers < 10.
  */
@@ -50,6 +51,7 @@ void print_small(int j, int mul, int n)
 /**
  * decimal_number - part of the code
  * @mul: i * j
+ * @n: description for n.
  * @j: parameter j
  * Description: prints numbers with decimals
  */
@@ -75,6 +77,7 @@ void decimal_number(int j, int mul, int n)
 /**
  * over_hundred - part of the code
  * @mul: i * j
+ * @n: description for n.
  * @j: parameter j
  * Description: prints numbers over 100.
  */
