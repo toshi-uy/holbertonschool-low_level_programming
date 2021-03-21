@@ -18,6 +18,86 @@ void print_number(int n)
 }
 
 /**
+ * print_small - part of the code
+ * @mul: i * j
+ * @j: parameter j
+ * Description: prints numbers < 10.
+ */
+
+void print_small(int j, int mul, int n)
+{
+	if (j != n)
+	{
+		if (j != 0)
+		{
+			_putchar(' ');
+			_putchar(' ');
+			_putchar(' ');
+		}
+		print_number(mul);
+		_putchar(',');
+	}
+	else
+	{
+		_putchar(' ');
+		_putchar(' ');
+		_putchar(' ');
+		print_number(mul);
+		_putchar('\n');
+	}
+}
+
+/**
+ * decimal_number - part of the code
+ * @mul: i * j
+ * @j: parameter j
+ * Description: prints numbers with decimals
+ */
+
+void decimal_number(int j, int mul, int n)
+{
+	if (j != n)
+	{
+		_putchar(' ');
+		_putchar(' ');
+		print_number(mul);
+		_putchar(',');
+	}
+	else
+	{
+		_putchar(' ');
+		_putchar(' ');
+		print_number(mul);
+		_putchar('\n');
+	}
+}
+
+/**
+ * over_hundred - part of the code
+ * @mul: i * j
+ * @j: parameter j
+ * Description: prints numbers over 100.
+ */
+
+void over_hundred(int j, int mul, int n)
+{
+	if (j != n)
+	{
+		if (j != 0)
+			_putchar(' ');
+		print_number(mul);
+		_putchar(',');
+	}
+	else
+	{
+		_putchar(' ');
+		print_number(mul);
+		_putchar('\n');
+	}
+
+}
+
+/**
  * print_times_table - function that prints the n times table, starting with 0
  * @n: number of time tables to print between 0 and 15
  *
@@ -28,7 +108,12 @@ void print_times_table(int n)
 {
 	int i, j, mul;
 
-	if (n >= 0 && n <= 15)
+	if (n == 0)
+	{
+		_putchar('0');
+		_putchar(10);
+	}
+	if (n > 0 && n <= 15)
 	{
 		for (i = 0; i <= n; i++)
 		{
@@ -37,58 +122,16 @@ void print_times_table(int n)
 				mul = i * j;
 				if (mul <= 9)
 				{
-					if (j != n)
-					{
-						if (j != 0)
-						{
-							_putchar(' ');
-							_putchar(' ');
-							_putchar(' ');
-						}
-						print_number(mul);
-						_putchar(',');
-					}
-					else
-					{
-						_putchar(' ');
-						_putchar(' ');
-						_putchar(' ');
-						print_number(mul);
-						_putchar('\n');
-					}
+
+					print_small(j, mul, n);
 				}
 				if (mul > 9 && mul <= 99)
 				{
-					if (j != n)
-					{
-						_putchar(' ');
-						_putchar(' ');
-						print_number(mul);
-						_putchar(',');
-					}
-					else
-					{
-						_putchar(' ');
-						_putchar(' ');
-						print_number(mul);
-						_putchar('\n');
-					}
+					decimal_number(j, mul, n);
 				}
 				if (mul > 99)
 				{
-					if (j != n)
-					{
-						if (j != 0)
-							_putchar(' ');
-						print_number(mul);
-						_putchar(',');
-					}
-					else
-					{
-						_putchar(' ');
-						print_number(mul);
-						_putchar('\n');
-					}
+					over_hundred(j, mul, n);
 				}
 			}
 		}
