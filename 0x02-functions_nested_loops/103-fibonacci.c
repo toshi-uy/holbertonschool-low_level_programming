@@ -13,7 +13,7 @@ int main(void)
 	b = 2;
 	i = 2;
 	res = 2;
-	for (;res < 4000000;)
+	for (; res < 4000000 ;)
 	{
 		res = a + b;
 		if (res % 2 == 0)
