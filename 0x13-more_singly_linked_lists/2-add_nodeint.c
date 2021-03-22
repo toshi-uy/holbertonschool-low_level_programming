@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * print_listint - function that prints all the elements of a list
+ * add_nodeint - function that adds a new node at the beginning of a list
  * @head: head pointer.
  * @n: parameter n.
  *
