@@ -5,7 +5,7 @@
  * returns its data (n).
  * @head: pointer to list
  *
- * Return: nothing
+ * Return: the head nodes data (n)
  */
 
 int pop_listint(listint_t **head)
