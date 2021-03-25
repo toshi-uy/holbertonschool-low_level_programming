@@ -1,25 +1,5 @@
 #include "holberton.h"
-/**
- * _strlen - counts strings
- * @s: parameter s
- *
- * Description: counts string characters
- *
- * Return: Count
- */
-
-unsigned int _strlen(char *s)
-{
-	int count = 0;
-
-	if (s == NULL)
-		return (0);
-	while (*(s + count))
-	{
-		count++;
-	}
-	return (count);
-}
+unsigned int _strlen(char *s);
 
 /**
  * binary_to_uint - function that converts a binary number to an unsigned int
@@ -48,4 +28,25 @@ unsigned int binary_to_uint(const char *b)
 		k *= 2;
 	}
 	return (num);
+}
+/**
+ * _strlen - counts strings
+ * @s: parameter s
+ *
+ * Description: counts string characters
+ *
+ * Return: Count
+ */
+
+unsigned int _strlen(char *s)
+{
+        int count = 0;
+
+        if (s == NULL)
+                return (0);
+        while (*(s + count))
+        {
+                count++;
+        }
+        return (count);
 }
