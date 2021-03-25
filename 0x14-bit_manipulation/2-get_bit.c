@@ -10,5 +10,25 @@
 
 int get_bit(unsigned long int n, unsigned int index)
 {
-	return ((n >> index) & 1);
+	char *a;
+	int i = 0;
+	unsigned int m, len = 0;
+
+	a = malloc(33);
+	if (a == NULL)
+		return (-1);
+	m = n;
+	while (m > 0)
+	{
+		a[i] = m % 2;
+		m = m / 2;
+		i++;
+		len++;
+        }
+
+	if (index <= len)
+		return ((n >> index) & 1);
+	if (index > len)
+		return(-1);
+	return (0);
 }
