@@ -1,5 +1,4 @@
 #include "holberton.h"
-unsigned int _strlen(char *s);
 
 /**
  * binary_to_uint - function that converts a binary number to an unsigned int
@@ -10,43 +9,18 @@ unsigned int _strlen(char *s);
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int k = 1, num = 0, len;
-	int c;
+	unsigned int num = 0;
 
 	if (!b)
 		return (0);
-	len = _strlen(b);
-
-	for (c = len - 1; c >= 0; c--)
+	for (num = 0; *b; b++)
 	{
-		if (b[c] != '0' && b[c] != '1')
-			return (0);
-		if (b[c] == '1')
-		{
-			num += k;
-		}
-		k *= 2;
+		if (*b == '1')
+			num = (num << 1) | 1;
+		else if (*b == '0' )
+			num <<= 1;
+		else
+			break;
 	}
 	return (num);
-}
-/**
- * _strlen - counts strings
- * @s: parameter s
- *
- * Description: counts string characters
- *
- * Return: Count
- */
-
-unsigned int _strlen(char *s)
-{
-        int count = 0;
-
-        if (s == NULL)
-                return (0);
-        while (*(s + count))
-        {
-                count++;
-        }
-        return (count);
 }
