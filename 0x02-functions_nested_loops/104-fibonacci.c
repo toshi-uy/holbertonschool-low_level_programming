@@ -8,22 +8,21 @@
  */
 int main(void)
 {
-	unsigned long a, b, res, i;
+	int a;
+	unsigned int f1, f2, fibo;
 
-	a = 1;
-	b = 2;
-	printf("%lu, ", a);
-	printf("%lu, ", b);
-	for (i = 3 ; i <= 97 ; i++)
+	f1 = 1;
+	f2 = 2;
+	for (a = 0; a < 98; a++)
 	{
-		res = a + b;
-		printf("%lu", res);
-		if (i != 97)
+		printf("%#x", f1);
+		if (a != 97)
 		{
 			printf(", ");
 		}
-		a = b;
-		b = res;
+		fibo = f1 + f2;
+		f1 = f2;
+		f2 = fibo;
 	}
 	printf("\n");
 	return (0);
