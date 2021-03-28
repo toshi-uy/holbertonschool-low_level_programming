@@ -15,7 +15,7 @@ int main(void)
 	f2 = 2;
 	for (a = 0; a < 98; a++)
 	{
-		printf("%#x", f1);
+		printf("%#ld", f1);
 		if (a != 97)
 		{
 			printf(", ");
