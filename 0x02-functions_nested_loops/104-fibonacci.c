@@ -9,7 +9,7 @@
 int main(void)
 {
 	int a;
-	unsigned int f1, f2, fibo;
+	unsigned long int f1, f2, fibo;
 
 	f1 = 1;
 	f2 = 2;
