@@ -11,7 +11,7 @@
 int main(int argc, char **argv)
 {
 	char buffer[1024];
-	int file_from, file_to, cls;
+	int file_from, file_to, cls, cls1;
 	int count = 1, count2 = 0;
 
 	if (argc != 3)
@@ -41,13 +41,8 @@ int main(int argc, char **argv)
 		}
 	}
 	cls = close(file_from);
-	if (cls == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", cls);
-		exit(100);
-	}
-	cls = close(file_to);
-	if (cls == -1)
+	cls1 = close(file_to);
+	if (cls == -1 | cls1 == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", cls);
 		exit(100);
