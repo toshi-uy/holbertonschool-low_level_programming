@@ -2,6 +2,8 @@
 
 /**
  * main - program that copies the content of a file to another file
+ * @argc: destination parameter
+ * @argv: parameter
  *
  * Return: Creates the new file with the content of the old one or exit.
  */
@@ -35,7 +37,7 @@ int main(int argc, char **argv)
 	if (cls == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", cls);
-                exit(100);
+		exit(100);
 	}
 	close(file_to);
 	return (0);
