@@ -1,7 +1,10 @@
 # 0x15. C - File I/O
+
 <img src="https://i.imgur.com/afMLln2.png" width=100%>
+
 **man or help:**
 - open -close -read -write -dprintf
+
 ## Learning Objectives
 ### General
 -   Look for the right source of information online
