@@ -1,6 +1,28 @@
 #include "holberton.h"
 
 /**
+ * _strlen - counts strings
+ * @s: parameter s
+ *
+ * Description: counts string characters
+ *
+ * Return: Count
+ */
+
+unsigned int _strlen(char *s)
+{
+	int count = 0;
+
+	if (s == NULL)
+		return (0);
+	while (*(s + count))
+	{
+		count++;
+	}
+	return (count);
+}
+
+/**
  * create_file - function that creates a file
  * @filename: file to create
  * @text_content: pointer to a text.
@@ -18,14 +40,10 @@ int create_file(const char *filename, char *text_content)
 	if (fd == -1)
 		return (-1);
 	if (!filename)
-                return (1);
-	while (*text_content)
-	{
-		ret = write(fd, text_content, 1);
-			if (ret == -1)
-				return (-1);
-		text_content++;
-	}
+		return (1);
+	ret = write(fd, text_content, _strlen(text_content));
+	if (ret == -1)
+		return (-1);
 	close(fd);
 	return (1);
 }
