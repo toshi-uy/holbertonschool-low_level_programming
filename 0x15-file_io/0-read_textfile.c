@@ -32,22 +32,26 @@ unsigned int _strlen(const char *s)
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd;
-	char *buf;
+	int fd = 0;
+	ssize_t ret = 0, imp = 0;
+	char *buff;
 
 	if (!filename)
 		return (0);
 	fd = open(filename, O_RDONLY);
 	if (fd == -1)
 		return (0);
-	buf = malloc(_strlen(filename));
-	if (buf == NULL)
+	buff = malloc(sizeof(char) * letters);
+	if (buff == NULL)
 		return (0);
-	read(fd, buf, letters);
-	write(STDIN_FILENO, buf, letters);
-	if (STDIN_FILENO == -1)
-		return (0);
+	imp = read(fd, buff, letters);
+	if (imp != -1)
+	{
+	ret = write(STDOUT_FILENO, buff, letters);
+	if (ret == -1)
+		return (-1);
+	}
 	close(fd);
 
-	return (_strlen(buf));
+	return (imp);
 }
