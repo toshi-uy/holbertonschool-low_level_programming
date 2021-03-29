@@ -31,7 +31,7 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
-	while ((count = read(file_from, buffer, sizeof(buffer))) != 0)
+	while ((count = read(file_from, buffer, sizeof(buffer))) > 0)
 	{
 		count2 = write(file_to, buffer, count);
 		if (count != count2)
