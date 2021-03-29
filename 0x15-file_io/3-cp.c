@@ -12,7 +12,7 @@ int main(int argc, char **argv)
 {
 	char buffer[1024];
 	int file_from, file_to, cls;
-	int count = 0;
+	int count = 1, count2 = 0;
 
 	if (argc != 3)
 	{
@@ -32,7 +32,14 @@ int main(int argc, char **argv)
 		exit(99);
 	}
 	while ((count = read(file_from, buffer, sizeof(buffer))) != 0)
-		write(file_to, buffer, count);
+	{
+		count2 = write(file_to, buffer, count);
+		if (count != count2)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+			exit(99);
+		}
+	}
 	cls = close(file_from);
 	if (cls == -1)
 	{
