@@ -23,10 +23,18 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (buff == NULL)
 		return (0);
 	imp = read(fd, buff, letters);
+	if (imp == -1)
+	{
+		free(buff);
+		return (0);
+	}
 	if (imp != -1)
 	{
 		if (write(STDOUT_FILENO, buff, letters) == -1)
+		{
+			free(buff);
 			return (0);
+		}
 	}
 	free(buff);
 	close(fd);
