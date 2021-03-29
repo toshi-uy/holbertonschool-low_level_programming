@@ -45,6 +45,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	read(fd, buf, letters);
 	write(STDIN_FILENO, buf, letters);
+	if (STDIN_FILENO == -1)
+		return (0);
 	len = _strlen(buf);
 	close(fd);
 
