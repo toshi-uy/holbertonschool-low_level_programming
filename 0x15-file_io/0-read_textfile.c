@@ -32,7 +32,7 @@ unsigned int _strlen(const char *s)
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd;
+	int fd, len;
 	char *buf;
 
 	if (!filename)
@@ -44,8 +44,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (buf == NULL)
 		return (0);
 	read(fd, buf, letters);
-	printf("%s\n", buf);
+	write(STDIN_FILENO, buf, letters);
+	len = _strlen(buf);
 	close(fd);
 
-	return (_strlen(buf));
+	return (len);
 }
