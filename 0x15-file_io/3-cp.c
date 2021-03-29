@@ -11,8 +11,7 @@
 int main(int argc, char **argv)
 {
 	char buffer[1024];
-	int file_from, file_to, cls, cls1;
-	int count = 1;
+	int file_from, file_to, cls, cls1, count = 0;
 
 	if (argc != 3)
 	{
@@ -39,6 +38,11 @@ int main(int argc, char **argv)
 			exit(99);
 		}
 	}
+	if (count == -1)
+        {
+                dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+                exit(98);
+        }
 	cls = close(file_from);
 	cls1 = close(file_to);
 	if (cls == -1 || cls1 == -1)
