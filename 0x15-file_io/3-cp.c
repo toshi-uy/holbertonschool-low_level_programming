@@ -39,6 +39,11 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", cls);
 		exit(100);
 	}
-	close(file_to);
+	cls = close(file_to);
+	if (cls == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", cls);
+		exit(100);
+	}
 	return (0);
 }
