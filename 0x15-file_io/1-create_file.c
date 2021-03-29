@@ -32,7 +32,8 @@ unsigned int _strlen(char *s)
 
 int create_file(const char *filename, char *text_content)
 {
-	int fd, ret = 0;
+	int fd;
+	ssize_t ret = 0;
 
 	if (!filename)
 		return (-1);
