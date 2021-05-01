@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * add_dnodeint_end - function that adds a new node at the end of a double  list
+ * add_dnodeint_end - function that adds a new node at the end of a double list
  * @head: pointer to header
  * @n: data n
  *
@@ -14,7 +14,7 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 
 	if (!head)
 		return (NULL);
-	new = malloc (sizeof(dlistint_t));
+	new = malloc(sizeof(dlistint_t));
 	if (new == NULL)
 		return (NULL);
 	new->n = n;
@@ -28,5 +28,5 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 		last = last->next;
 	last->next = new;
 	new->prev = last;
-	return(new);
+	return (new);
 }
