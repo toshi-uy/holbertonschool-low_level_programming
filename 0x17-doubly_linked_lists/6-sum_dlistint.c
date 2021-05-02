@@ -1,11 +1,10 @@
 #include "lists.h"
 
 /**
- * add_dnodeint - function that adds a new node at the beginning of a list
+ * sum_dlistint - function that returns the sum of all the data of a double list
  * @head: pointer to list
- * @n: pointer to data.
  *
- * Return: address of the new elemnt created
+ * Return: the sum of all data in the double listed link
  */
 
 int sum_dlistint(dlistint_t *head)
