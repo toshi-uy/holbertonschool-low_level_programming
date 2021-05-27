@@ -14,7 +14,7 @@ unsigned long int key_index(const unsigned char *key, unsigned long int size)
 	unsigned long int i = 0;
 	unsigned long int value;
 
-	while (value < ULONG_MAX && i < strlen(size))
+	while (value < ULONG_MAX && i < strlen(key))
 	{
 		value = hash_djb2(value);
 		value += key[i];
