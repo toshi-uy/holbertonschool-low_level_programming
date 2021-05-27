@@ -12,13 +12,10 @@
 unsigned long int key_index(const unsigned char *key, unsigned long int size)
 {
 	unsigned long int i = 0;
-	unsigned long int value;
+	unsigned long int index;
 
-	while (value < ULONG_MAX && i < strlen(key))
-	{
-		value = hash_djb2(key);
-		value += key[i];
-		i++;
-	}
-	return (value % size);
+	index = hash_djb2(key);
+	for (i = 0; i < size; i++)
+		
+	return (index % size);
 }
