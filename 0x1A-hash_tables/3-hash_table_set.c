@@ -1,9 +1,10 @@
 #include "hash_tables.h"
 
 /**
- * key_index - function that gives you the index of a key
+ * hash_table_set - function that adds an element to the hash table.
  * @value: pointer to value
  * @key: pointer to key
+ * @ht: pointer to hash table.
  *
  * Return: 1 if it succeeded, 0 otherwise
  */
@@ -21,7 +22,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	/* creating pointer to head of the array */
 	tmp = ht->array[index];
 	/* looping in the array */
-	while(tmp)
+	while (tmp)
 	{
 		/* checking if the key matches the key in the node */
 		if (strcmp(key, tmp->key) == 0)
