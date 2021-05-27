@@ -17,7 +17,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (!key || !ht || *key = '\0' || !value)
 		return (0);
 	/* getting the index of the key */
-	index = key_index((const unsigned char)*key, ht->size);
+	index = key_index((const unsigned char *)key, ht->size);
 	/* creating pointer to head of the array */
 	tmp = ht->array[index];
 	/* looping in the array */
