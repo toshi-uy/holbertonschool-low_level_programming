@@ -18,7 +18,7 @@ void hash_table_print(const hash_table_t *ht)
 	/* printing the formating */
 	printf("{");
 	/* looping through the array */
-	for (i = 1; i <= ht->size; i++)
+	for (i = 0; i < ht->size; i++)
 	{
 		/* in each index of the array set the pointer to the head */
 		tmp = ht->array[i];
