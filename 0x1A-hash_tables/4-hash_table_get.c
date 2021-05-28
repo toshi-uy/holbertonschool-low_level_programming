@@ -32,4 +32,5 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 		tmp = tmp->next;
 	}
 	/* if no key was found return NULL */
+	return (NULL);
 }
