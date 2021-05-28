@@ -23,7 +23,7 @@ void hash_table_print(const hash_table_t *ht)
 		/* in each index of the array set the pointer to the head */
 		tmp = ht->array[i];
 		/* loop thought the linked list */
-		while(tmp)
+		while (tmp)
 		{
 			/* print the key followed by the value */
 			printf("'%s': '%s'", tmp->key, tmp->value);
