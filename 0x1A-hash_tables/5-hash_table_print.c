@@ -18,16 +18,20 @@ void hash_table_print(const hash_table_t *ht)
 	/* printing the formating */
 	printf("{");
 	/* looping through the array */
-	for (i = 0; i < ht->size; i++)
+	for (i = 1; i <= ht->size; i++)
 	{
 		/* in each index of the array set the pointer to the head */
 		tmp = ht->array[i];
 		/* loop thought the linked list */
 		while (tmp)
 		{
+			if (!tmp->key)
+				continue;
 			/* print the key followed by the value */
 			printf("'%s': '%s'", tmp->key, tmp->value);
 			tmp = tmp->next;
+			if (i < ht->size)
+				printf(", ");
 		}
 	}
 	/* print the end of the format and new line */
