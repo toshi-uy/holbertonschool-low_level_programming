@@ -11,6 +11,7 @@ void hash_table_print(const hash_table_t *ht)
 {
 	hash_node_t *tmp;
 	unsigned long int i;
+	int flag = 0;
 
 	/* checking if there is no hash table */
 	if (!ht)
@@ -29,14 +30,15 @@ void hash_table_print(const hash_table_t *ht)
 			{
 				if (!tmp->key)
 					continue;
+				/* printing ', ' on each value after the first one */
+				if (flag == 1)
+					printf(", ");
 				/* print the key followed by the value */
 				printf("'%s': '%s'", tmp->key, tmp->value);
-				/* printing ', ' on each value */
-				if (i < ht->size - 1)
-					printf(", ");
 				/* moving one node */
 				tmp = tmp->next;
 			}
+			flag = 1;
 		}
 	}
 	/* print the end of the format and new line */
