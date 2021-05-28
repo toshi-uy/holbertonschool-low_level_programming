@@ -20,20 +20,23 @@ void hash_table_print(const hash_table_t *ht)
 	/* looping through the array */
 	for (i = 0; i < ht->size; i++)
 	{
-		/* in each index of the array set the pointer to the head */
-		tmp = ht->array[i];
-		/* loop thought the linked list */
-		while (tmp)
+		if (ht->array[i] != NULL)
 		{
-			if (!tmp->key)
-				continue;
-			/* print the key followed by the value */
-			printf("'%s': '%s'", tmp->key, tmp->value);
-			/* printing ', ' on each value */
-			if (i < ht->size - 1)
-				printf(", ");
-			/* moving one node */
-			tmp = tmp->next;
+			/* in each index of the array set the pointer to the head */
+			tmp = ht->array[i];
+			/* loop thought the linked list */
+			while (tmp)
+			{
+				if (!tmp->key)
+					continue;
+				/* print the key followed by the value */
+				printf("'%s': '%s'", tmp->key, tmp->value);
+				/* printing ', ' on each value */
+				if (i < ht->size - 1)
+					printf(", ");
+				/* moving one node */
+				tmp = tmp->next;
+			}
 		}
 	}
 	/* print the end of the format and new line */
