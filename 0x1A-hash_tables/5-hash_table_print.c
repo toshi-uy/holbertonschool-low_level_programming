@@ -29,9 +29,11 @@ void hash_table_print(const hash_table_t *ht)
 				continue;
 			/* print the key followed by the value */
 			printf("'%s': '%s'", tmp->key, tmp->value);
-			tmp = tmp->next;
+			/* printing ', ' on each value */
 			if (i < ht->size)
 				printf(", ");
+			/* moving one node */
+			tmp = tmp->next;
 		}
 	}
 	/* print the end of the format and new line */
