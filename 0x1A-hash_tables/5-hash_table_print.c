@@ -27,6 +27,7 @@ void hash_table_print(const hash_table_t *ht)
 		{
 			/* print the key followed by the value */
 			printf("'%s': '%s'", tmp->key, tmp->value);
+			tmp = tmp->next;
 		}
 	}
 	/* print the end of the format and new line */
