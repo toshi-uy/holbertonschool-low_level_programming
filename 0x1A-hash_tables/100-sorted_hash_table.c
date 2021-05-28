@@ -57,8 +57,6 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 		/* checking if the key matches the key in the node */
 		if (strcmp(key, tmp->key) == 0)
 		{
-			if (tmp->sprev == NULL)
-				tmp->snext = NULL;
 			/* if true free the value and assign it to the value given */
 			free(tmp->value);
 			tmp->value = strdup(value);
@@ -81,7 +79,161 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	return (1);
 }
 
-char *shash_table_get(const shash_table_t *ht, const char *key);
-void shash_table_print(const shash_table_t *ht);
-void shash_table_print_rev(const shash_table_t *ht);
-void shash_table_delete(shash_table_t *ht);
+/**
+ * shash_table_get - function that retrieves a value associated with a key.
+ * @key: pointer to key
+ * @ht: pointer to hash table.
+ *
+ * Return: 1 if it succeeded, 0 otherwise
+ */
+
+char *shash_table_get(const shash_table_t *ht, const char *key)
+{
+	unsigned long int index;
+	shash_node_t *tmp;
+
+	/* checking if the key or the node are null */
+	if (!key || !ht || *key == '\0')
+		return (NULL);
+		/* getting the index of the key */
+	index = key_index((const unsigned char *)key, ht->size);
+	/* creating pointer to head of the array */
+	tmp = ht->array[index];
+	/* looping in the array */
+	while (tmp)
+	{
+		/* checking if the key matches the key in the node */
+		if (strcmp(key, tmp->key) == 0)
+		{
+			/* if true return the value */
+			return (tmp->value);
+		}
+		tmp = tmp->next;
+	}
+	/* if no key was found return NULL */
+	return (NULL);
+}
+
+/**
+ * shash_table_print - function that prints an shash table.
+ * @ht: pointer to hash table.
+ *
+ */
+
+void shash_table_print(const shash_table_t *ht)
+{
+	shash_node_t *tmp;
+	unsigned long int i;
+	int flag = 0;
+
+	/* checking if there is no hash table */
+	if (!ht)
+		return;
+	/* printing the formating */
+	printf("{");
+	/* looping through the array */
+	for (i = 0; i < ht->size; i++)
+	{
+		if (ht->array[i] != NULL)
+		{
+			/* in each index of the array set the pointer to the head */
+			tmp = ht->array[i];
+			/* loop thought the linked list */
+			while (tmp)
+			{
+				if (!tmp->key)
+					continue;
+				/* printing ', ' on each value after the first one */
+				if (flag == 1)
+					printf(", ");
+				/* print the key followed by the value */
+				printf("'%s': '%s'", tmp->key, tmp->value);
+				/* moving one node */
+				tmp = tmp->next;
+			}
+			flag = 1;
+		}
+	}
+	/* print the end of the format and new line */
+	printf("}\n");
+}
+
+/**
+ * shash_table_print_rev - function that prints an shash table.
+ * @ht: pointer to hash table.
+ *
+ */
+
+void shash_table_print_rev(const shash_table_t *ht)
+{
+	shash_node_t *tmp;
+	unsigned long int i;
+	int flag = 0;
+
+	/* checking if there is no hash table */
+	if (!ht)
+		return;
+	/* printing the formating */
+	printf("{");
+	/* looping through the array */
+	for (i = 0; i < ht->size; i++)
+	{
+		if (ht->array[i] != NULL)
+		{
+			/* in each index of the array set the pointer to the head */
+			tmp = ht->array[i];
+			/* loop thought the linked list */
+			while (tmp)
+			{
+				if (!tmp->key)
+					continue;
+				/* printing ', ' on each value after the first one */
+				if (flag == 1)
+					printf(", ");
+				/* print the key followed by the value */
+				printf("'%s': '%s'", tmp->key, tmp->value);
+				/* moving one node */
+				tmp = tmp->next;
+			}
+			flag = 1;
+		}
+	}
+	/* print the end of the format and new line */
+	printf("}\n");
+}
+
+/**
+ * shash_table_delete - shash_table_delete.
+ * @ht: pointer to hash table.
+ *
+ */
+void shash_table_delete(shash_table_t *ht)
+{
+	shash_node_t *tmp, *tmp_next;
+	unsigned long int i;
+
+	if (ht)
+	{
+		for (i = 0; i < ht->size; i++)
+		{
+			if (ht->array[i])
+			{
+				tmp = ht->array[i];
+				tmp_next = ht->array[i]->next;
+				while (tmp_next)
+				{
+					free(tmp->key);
+					free(tmp->value);
+					free(tmp);
+					tmp = tmp_next;
+					tmp_next = tmp_next->next;
+				}
+				free(tmp->key);
+				free(tmp->value);
+				free(tmp);
+			}
+		}
+		free(ht->array);
+		free(ht);
+	}
+}
