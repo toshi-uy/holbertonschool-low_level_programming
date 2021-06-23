@@ -12,7 +12,7 @@ int main(void)
     for (i = 0; i < size; i++)
     {
         if (biggest < list[i])
-            biggest = array[i];
+            biggest = list[i];
     }
     biggest += 1;
 
@@ -31,7 +31,7 @@ int main(void)
         {
             cont += 1;
         }
-        index[j] = cont;
+        count[j] = cont;
     }
     for (i = 0; i < biggest; i++)
     {
