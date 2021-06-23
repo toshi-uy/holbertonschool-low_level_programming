@@ -4,7 +4,7 @@
 
 int main(void)
 {
-    char list[] = {1, 2, 2, 3, 3, 3};
+    char list[] = {2, 2, 3, 4};
     char *count;
     int i, j, size, cont, biggest = 0, result = -1;
 
