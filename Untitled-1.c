@@ -18,7 +18,7 @@ int main(void)
 
     count = malloc(sizeof(int) * biggest);
     if (count == NULL)
-        return NULL;
+        return (-1);
     
     for (i = 0; i < biggest; i++)
         count[i] = 0;
