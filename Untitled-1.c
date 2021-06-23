@@ -33,6 +33,7 @@ int main(void)
             cont += 1;
         }
         count[j] = cont;
+        printf("%d", count[j]);
     }
     for (i = 0; i < biggest; i++)
     {
