@@ -21,10 +21,10 @@ int main(void)
     if (count == NULL)
         return (-1);
     
-    for (i = 0; i < biggest; i++)
+    for (i = 0; i <= biggest; i++)
         count[i] = 0;
     
-    for (j = 0; j < biggest; j++)
+    for (j = 0; j <= biggest; j++)
     {
         cont = 0;
         for (i = 0; i < size; i++)
