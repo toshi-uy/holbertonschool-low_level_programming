@@ -9,6 +9,7 @@ int main(void)
     int i, j, size, cont, biggest = 0, result = -1;
 
     size = sizeof(list) / sizeof(list[0]);
+    printf("size: %d\n", size);
     for (i = 0; i < size; i++)
     {
         if (biggest < list[i])
@@ -39,5 +40,6 @@ int main(void)
             result = i;
     }
     printf("result: %d\n", result);
+    free(count);
     return (0);
 }
