@@ -3,6 +3,6 @@ SRC = main.c holberton.c
 OBJ = $(SRC:%c=%.o)
 NAME = holberton
 $(NAME): $(OBJ)
-	$(CC) $(SRC) -o $(NAME)
+	$(CC) $(OBJ) -o $(NAME)
 all:
 	$(NAME)
