@@ -1,5 +1,6 @@
 {
     "files.associations": {
         "search_algos.h": "c"
-    }
+    },
+    "C_Cpp.errorSquiggles": "Enabled"
 }
