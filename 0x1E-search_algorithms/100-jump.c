@@ -29,7 +29,8 @@ int jump_search(int *array, size_t size, int value)
 		if (array[j] < value)
 		{
 			printf("enter first if\n");
-			j += jump;
+			j = j + jump;
+			continue;
 		}
 		else if (array[j] >= value)
 		{
