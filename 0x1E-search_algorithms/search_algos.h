@@ -1,10 +1,10 @@
 #ifndef SEARCH_A
 #define SEARCH_A
+
 #include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <limits.h>
 
 /* Prototypes */
 int linear_search(int *array, size_t size, int value);
