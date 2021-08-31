@@ -28,10 +28,10 @@ int binary_search(int *array, size_t size, int value)
 		printf("%d\n", array[high]);
 		if (array[mid] < value)
 			low = mid + 1;
-		else if (array[mid] > value)
-			high = mid - 1;
-		else
+		else if (array[mid] == value)
 			return (value);
+		else
+			high = mid - 1;
 		mid = (low + high) / 2;
 	}
 	return (-1);
