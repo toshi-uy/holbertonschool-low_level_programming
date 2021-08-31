@@ -31,7 +31,7 @@ int jump_search(int *array, size_t size, int value)
 	{
 		printf("enter first if\n");
 		j += jump;
-		jump_search(*array, size, value);
+		jump_search(array, size, value);
 	}
 	else if (array[j] >= value)
 	{
