@@ -39,6 +39,7 @@ int binary_search_rec(int *array, size_t min, size_t max, int value)
 {
 	size_t mid = 0;
 
+	printf("entro al binary\n");
 	if (max >= min)
 	{
 		mid = min + (max - 1) / 2;
