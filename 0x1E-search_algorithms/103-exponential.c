@@ -13,7 +13,7 @@
 
 int exponential_search(int *array, size_t size, int value)
 {
-	int high, mid, low, i = 0;
+	size_t i = 0;
 
 	if (!array)
 		return (-1);
@@ -22,7 +22,7 @@ int exponential_search(int *array, size_t size, int value)
 		return (0);
 	i++;
 	while (i < size && array[i] <= value)
-        	i = i*2;
+        	i = i * 2;
 	return (binarySearch(array, i / 2, calcmin(i, size - 1), value));
 }
 
