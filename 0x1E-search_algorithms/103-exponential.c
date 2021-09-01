@@ -39,7 +39,7 @@ int exponential_search(int *array, size_t size, int value)
 
 int binary_search(int *array, size_t min, size_t max, int value)
 {
-	size_t mid = 0, i;
+	size_t mid = 0;
 
 	if (max >= min)
 	{
