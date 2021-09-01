@@ -12,14 +12,13 @@
 
 int exponential_search(int *array, size_t size, int value)
 {
-	size_t i = 0;
+	size_t i = 1;
 
 	if (!array)
 		return (-1);
 	printf("Value checked array[%d] = [%d]\n", 0, array[0]);
 	if (array[0] == value)
 		return (0);
-	i++;
 	while (i < size && array[i] <= value)
         	i = i * 2;
 	return (binary_search_rec(array, i / 2, minimum(i, size - 1), value));
