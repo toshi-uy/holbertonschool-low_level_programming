@@ -4,7 +4,7 @@
  * interpolation_search - function that searches for a value in an array of integers
  * using the interpolation search algorithm
  * @array: array to search in
- * @size: size of the array
+ * @size: size of the arrayay
  * @value: value to search for
  *
  * Return: the first index where value is located, or -1 if it fails
@@ -12,27 +12,26 @@
 
 int interpolation_search(int *array, size_t size, int value)
 {
-	int high, mid, low, i = 0;
-
-	if (!array)
-		return (-1);
-	low = 0;
-	high = size - 1;
-	mid = (low + high) / 2;
+	size_t low = 0, high = size - 1, pos;
 
 	while (low <= high)
 	{
-		printf("Searching in array: ");
-		for (i = low; i < high; i++)
-			printf("%d, ", array[i]);
-		printf("%d\n", array[high]);
-		if (array[mid] < value)
-			low = mid + 1;
-		else if (array[mid] > value)
-			high = mid - 1;
+		if (array[low] == array[high])
+		{
+			if (array[low] == value)
+				return (low);
+	    		else
+				return (-1);
+		}
+		pos = low +
+(((double)(high - low) / (array[high] - array[low])) * (value - array[low]));
+		printf("Value checked array[%lu] = [%d]\n", pos, array[pos]);
+		if (value == array[pos])
+	    		return pos;
+		else if (value < array[pos])
+	    		high = pos - 1;
 		else
-			return (value);
-		mid = (low + high) / 2;
+			low = pos + 1;
 	}
 	return (-1);
 }
