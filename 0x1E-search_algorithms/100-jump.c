@@ -3,7 +3,7 @@
 
 /**
  * jump_search - function that searches for a value in an array of integers
- * using the Binary search algorithm
+ * using the Jump search algorithm
  * @array: array to search in
  * @size: size of the array
  * @value: value to search for
