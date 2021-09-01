@@ -1,5 +1,4 @@
 #include "search_algos.h"
-#include <math.h>
 
 /**
  * exponential_search - function that searches for a value in an array of integers
@@ -23,7 +22,7 @@ int exponential_search(int *array, size_t size, int value)
 	i++;
 	while (i < size && array[i] <= value)
         	i = i * 2;
-	return (binary_search_rec(array, i / 2, calcmin(i, size - 1), value));
+	return (binary_search_rec(array, i / 2, minimum(i, size - 1), value));
 }
 
 /**
@@ -51,4 +50,18 @@ int binary_search_rec(int *array, size_t min, size_t max, int value)
 	        return (binary_search_rec(array, mid + 1, max, value));
 	}
 	return(-1);
+}
+
+/**
+ * minimum - minimum of two values
+ * @first: first value to check
+ * @second: second value to check
+ * Return: the minimum value
+ */
+
+size_t minimum(size_t first, size_t second)
+{
+	if (second < first)
+		return (second);
+	return (first);
 }
