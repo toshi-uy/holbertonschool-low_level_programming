@@ -27,7 +27,7 @@ int exponential_search(int *array, size_t size, int value)
 }
 
 /**
- * binary_search - function that searches for a value in an array of integers
+ * binary_search_rec - function that searches for a value in an array of integers
  * using the Binary search algorithm
  * @array: array to search in
  * @min: min of array
@@ -37,7 +37,7 @@ int exponential_search(int *array, size_t size, int value)
  * Return: the first index where value is located, or -1 if it fails
  */
 
-int binary_search(int *array, size_t min, size_t max, int value)
+int binary_search_rec(int *array, size_t min, size_t max, int value)
 {
 	size_t mid = 0;
 
@@ -47,8 +47,8 @@ int binary_search(int *array, size_t min, size_t max, int value)
 		if (array[mid] == value)
 			return (mid);
 		if (array[mid] > value)
-			return (binary_search(array, min, (mid - 1), value));
-	        return (binary_search(array, mid + 1, max, value));
+			return (binary_search_rec(array, min, (mid - 1), value));
+	        return (binary_search_rec(array, mid + 1, max, value));
 	}
 	return(-1);
 }
