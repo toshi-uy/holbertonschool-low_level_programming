@@ -18,7 +18,7 @@ int advanced_binary(int *array, size_t size, int value)
 		return (-1);
 	low = 0;
 	high = size - 1;
-	return (advanced_binary_rec(array, low, ));
+	return (advanced_binary_rec(array, low, high, value));
 }
 
 /**
