@@ -21,7 +21,7 @@ int exponential_search(int *array, size_t size, int value)
 		return (0);
 	while (i < size && array[i] <= value)
         	i = i * 2;
-	return (binary_search(array, i / 2, value));
+	return (binary_search(array, i, value));
 }
 
 /**
