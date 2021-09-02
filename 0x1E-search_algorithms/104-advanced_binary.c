@@ -45,7 +45,11 @@ int advanced_binary_rec(int *array, int low, int high, int value)
 		mid = low + (high - low) / 2;
 
 		if (array[mid] == value)
+		{
+			if (array[mid - 1] == value)
+				return (advanced_binary_rec(array, mid - 1, mid, value));
 			return (mid);
+		}
 		if (array[mid] > value)
 			return (advanced_binary_rec(array, low, mid - 1, value));
 		return (advanced_binary_rec(array, mid + 1, high, value));
