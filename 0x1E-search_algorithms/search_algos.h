@@ -17,7 +17,6 @@ int exponential_search(int *array, size_t size, int value);
 int advanced_binary(int *array, size_t size, int value);
 
 /* Auxiliary prototypes */
-int binary_search_rec(int *array, size_t min, size_t max, int value);
-size_t minimum(size_t first, size_t second);
+int binary_search_2(int *array, size_t size, size_t pos, int value);
 
 #endif /* ends SEARCH_A */
