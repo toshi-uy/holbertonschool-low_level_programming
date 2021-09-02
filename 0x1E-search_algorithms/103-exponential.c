@@ -43,7 +43,7 @@ int binary_search_2(int *array, size_t size, size_t pos, int value)
 
 	if (!array)
 		return (-1);
-	low = 0;
+	low = pos;
 	high = size - 1;
 	mid = (low + high) / 2;
 
