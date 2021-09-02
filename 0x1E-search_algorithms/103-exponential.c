@@ -39,7 +39,7 @@ int exponential_search(int *array, size_t size, int value)
 
 int binary_search_2(int *array, size_t size, size_t pos, int value)
 {
-	size_t high, mid, low;
+	size_t high, mid, low, i = 0;
 
 	if (!array)
 		return (-1);
@@ -50,8 +50,8 @@ int binary_search_2(int *array, size_t size, size_t pos, int value)
 	while (low <= high)
 	{
 		printf("Searching in array: ");
-		for (pos = low; pos < high; pos++)
-			printf("%d, ", array[pos]);
+		for (i = low; i < high; i++)
+			printf("%d, ", array[i]);
 		printf("%d\n", array[high]);
 		if (array[mid] < value)
 			low = mid + 1;
