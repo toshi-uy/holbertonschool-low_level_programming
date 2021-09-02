@@ -18,5 +18,6 @@ int advanced_binary(int *array, size_t size, int value);
 
 /* Auxiliary prototypes */
 int binary_search_2(int *array, size_t size, size_t pos, int value);
+int advanced_binary_rec(int *array, int low, int high, int value);
 
 #endif /* ends SEARCH_A */
