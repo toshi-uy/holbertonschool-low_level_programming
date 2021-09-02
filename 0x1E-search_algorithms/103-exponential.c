@@ -24,7 +24,7 @@ int exponential_search(int *array, size_t size, int value)
         	i = i * 2;
 	}
 	i = i / 2;
-	return (binary_search_2(array, size - i, i, value));
+	return (binary_search_2(array, size, i, value));
 }
 
 /**
@@ -42,6 +42,7 @@ int binary_search_2(int *array, size_t size, size_t pos, int value)
 {
 	size_t high, mid, low, i = 0;
 
+	size = size - pos;
 	low = pos;
 	high = size - 1;
 	mid = (low + high) / 2;
