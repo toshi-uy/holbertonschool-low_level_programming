@@ -46,7 +46,7 @@ int advanced_binary_rec(int *array, int low, int high, int value)
 
 		if (array[mid] == value)
 		{
-			if (low == mid && array[mid] == value)
+			if (low == mid ||  high == mid)
 				return (mid);	
 			if (mid - 1 && array[mid - 1] == value)
 				return (advanced_binary_rec(array, low, mid, value));
