@@ -24,7 +24,7 @@ int exponential_search(int *array, size_t size, int value)
 		i = i * 2;
 	}
 	if (size > i)
-		size = i;
+		size = i + 1;
 	i = i / 2;
 	printf("Value found between indexes [%lu] and [%lu]\n", i, size - 1);
 	return (binary_search_2(array, size, i, value));
