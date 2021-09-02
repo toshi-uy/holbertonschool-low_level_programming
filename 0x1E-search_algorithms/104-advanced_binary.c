@@ -20,7 +20,7 @@ int advanced_binary(int *array, size_t size, int value)
 	{
 		if (array[0] == value)
 		{
-			printf("Searching in array: %d", array[0]);
+			printf("Searching in array: %d\n", array[0]);
 			return (0);
 		}
 		return (-1);
