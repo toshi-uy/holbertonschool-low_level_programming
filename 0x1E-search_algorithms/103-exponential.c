@@ -23,7 +23,8 @@ int exponential_search(int *array, size_t size, int value)
 		printf("Value checked array[%lu] = [%d]\n", i, array[i]);
         	i = i * 2;
 	}
-	return (binary_search_2(array, size - (i / 2), i / 2, value));
+	i = i / 2;
+	return (binary_search_2(array, size - i, i, value));
 }
 
 /**
@@ -41,12 +42,11 @@ int binary_search_2(int *array, size_t size, size_t pos, int value)
 {
 	size_t high, mid, low, i = 0;
 
-	if (!array)
-		return (-1);
 	low = pos;
 	high = size - 1;
 	mid = (low + high) / 2;
-
+	if (array[pos] == value)
+		return (pos);
 	while (low <= high)
 	{
 		printf("Searching in array: ");
