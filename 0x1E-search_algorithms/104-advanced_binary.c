@@ -22,8 +22,8 @@ int advanced_binary(int *array, size_t size, int value)
 }
 
 /**
- * advanced_binary_rec - function that searches for a value in an array of integers
- * using the Advanced Binary search algorithm
+ * advanced_binary_rec - function that searches for a value in an array
+ * of integers using the Advanced Binary search algorithm
  * @array: array to search in
  * @low: min of the array
  * @high: max of the array
@@ -43,12 +43,12 @@ int advanced_binary_rec(int *array, int low, int high, int value)
 			printf("%d, ", array[i]);
 		printf("%d\n", array[high]);
 		mid = low + (high - low) / 2;
-  
+
 		if (array[mid] == value)
-		    return mid;
+			return mid;
 		if (array[mid] > value)
-		    return advanced_binary_rec(array, low, mid - 1, value);
-  		return advanced_binary_rec(array, mid + 1, high, value);
+			return (advanced_binary_rec(array, low, mid - 1, value));
+		return (advanced_binary_rec(array, mid + 1, high, value));
 	}
-	return -1;
+	return (-1);
 }
