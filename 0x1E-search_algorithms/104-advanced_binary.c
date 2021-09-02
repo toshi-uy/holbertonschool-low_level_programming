@@ -16,15 +16,6 @@ int advanced_binary(int *array, size_t size, int value)
 
 	if (!array)
 		return (-1);
-	/*if (size == 1)
-	{
-		if (array[0] == value)
-		{
-			printf("Searching in array: %d\n", array[0]);
-			return (0);
-		}
-		return (-1);
-	}*/
 	low = 0;
 	high = size - 1;
 	return (advanced_binary_rec(array, low, high, value));
