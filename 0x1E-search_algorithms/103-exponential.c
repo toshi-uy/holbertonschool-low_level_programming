@@ -21,10 +21,10 @@ int exponential_search(int *array, size_t size, int value)
 	while (i < size && array[i] <= value)
 	{
 		printf("Value checked array[%lu] = [%d]\n", i, array[i]);
-        	i = i * 2;
+		i = i * 2;
 	}
-	printf("Value found between indexes [%lu] and [%lu]\n", i / 2, size - 1);
 	i = i / 2;
+	printf("Value found between indexes [%lu] and [%lu]\n", i, size - 1);
 	return (binary_search_2(array, size, i, value));
 }
 
