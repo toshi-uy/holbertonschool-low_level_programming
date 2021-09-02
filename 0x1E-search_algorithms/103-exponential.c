@@ -23,22 +23,23 @@ int exponential_search(int *array, size_t size, int value)
 		printf("Value checked array[%lu] = [%d]\n", i, array[i]);
         	i = i * 2;
 	}
-	return (binary_search(array, i, value));
+	return (binary_search_2(array, size - i, i, value));
 }
 
 /**
- * binary_search - function that searches for a value in an array of integers
+ * binary_search_2 - function that searches for a value in an array of integers
  * using the Binary search algorithm
  * @array: array to search in
  * @size: size of the array
+ * @pos: position to start
  * @value: value to search for
  *
  * Return: the first index where value is located, or -1 if it fails
  */
 
-int binary_search(int *array, size_t size, int value)
+int binary_search_2(int *array, size_t size, size_t pos, int value)
 {
-	int high, mid, low, i = 0;
+	int high, mid, low;
 
 	if (!array)
 		return (-1);
