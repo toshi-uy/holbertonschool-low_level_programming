@@ -28,13 +28,13 @@ aux->express->index, aux->express->n);
 		}
 		else
 		{
-			printf("Value checked at index [%lu] = [%d]\n", aux->index, aux->n);
+			printf("Value checked at index [%lu] = [%d]\n", aux->express->index, aux->express->n);
 			break;
 		}
 	}
 	printf("Value found between indexes [%lu] and [%lu]\n",
 aux->index, aux->express->index);
-	while (aux && aux->index < aux->express->next->index)
+	while (aux)
 	{
 		printf("Value checked at index [%lu] = [%d]\n", aux->index, aux->n);
 		if (aux->n == value)
