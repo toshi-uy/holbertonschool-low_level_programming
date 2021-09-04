@@ -23,7 +23,7 @@ skiplist_t *linear_skip(skiplist_t *list, int value)
 		if (aux->express->n < value)
 		{
 			printf("Value checked at index [%lu] = [%d]\n",
-aux->express->next->index, aux->express->next->n);
+aux->express->index, aux->express->n);
 			aux = aux->express->next;
 		}
 		else
