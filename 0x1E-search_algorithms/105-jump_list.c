@@ -13,12 +13,11 @@
 
 listint_t *jump_list(listint_t *list, size_t size, int value)
 {
-	size_t jump, j = 0, i;
+	size_t jump = sqrt(size), j = 0, i;
 	listint_t *aux = list, *jumped;
 
 	if (!list)
 		return (NULL);
-	jump = sqrt(size);
 	if (value < list->n)
 		return (NULL);
 	while (aux && j + jump < size)
@@ -47,10 +46,7 @@ j, min(j + jump, size - 1));
 		if (aux->n == value)
 			return (aux);
 		if (aux->n > value)
-		{
-			aux = NULL;
-			return (aux);
-		}
+			return (NULL);
 		i++;
 		aux = aux->next;
 	}
