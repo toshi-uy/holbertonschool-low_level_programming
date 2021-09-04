@@ -28,7 +28,8 @@ aux->express->index, aux->express->n);
 		}
 		else
 		{
-			printf("Value checked at index [%lu] = [%d]\n", aux->express->index, aux->express->n);
+			printf("Value checked at index [%lu] = [%d]\n",
+	aux->express->index, aux->express->n);
 			break;
 		}
 	}
