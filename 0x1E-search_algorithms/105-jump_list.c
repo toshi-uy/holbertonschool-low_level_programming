@@ -46,6 +46,8 @@ j, min(j + jump, size - 1));
 		printf("Value checked at index [%lu] = [%d]\n", i, aux->n);
 		if (aux->n == value)
 			return (aux);
+		if (aux->n > value)
+			return (NULL);
 		i++;
 		aux = aux->next;
 	}
