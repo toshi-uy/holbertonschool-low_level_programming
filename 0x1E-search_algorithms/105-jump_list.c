@@ -49,6 +49,8 @@ j, min(j + jump, size - 1));
 		i++;
 		aux = aux->next;
 	}
+	if (!aux)
+		return (NULL);
 	return (NULL);
 }
 
