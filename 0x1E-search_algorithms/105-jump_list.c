@@ -2,13 +2,13 @@
 #include <math.h>
 
 /**
- * *jump_search - function that searches for a value in an array of integers
+ * jump_list - function that searches for a value in a lsit of integers
  * using the Jump search algorithm
- * @array: array to search in
- * @size: size of the array
+ * @list: pointer to head of list to search in
+ * @size: size of the list
  * @value: value to search for
  *
- * Return: the first index where value is located, or -1 if it fails
+ * Return: the first node where value is located, or NULL if it fails
  */
 
 listint_t *jump_list(listint_t *list, size_t size, int value)
