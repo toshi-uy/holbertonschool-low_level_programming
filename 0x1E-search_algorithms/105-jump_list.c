@@ -38,7 +38,8 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 			break;
 		}
 	}
-	printf("Value found between indexes [%lu] and [%lu]\n", j, min(j + jump, size - 1));
+	printf("Value found between indexes [%lu] and [%lu]\n",
+j, min(j + jump, size - 1));
 	while (j < size)
 	{
 		printf("Value checked at index [%lu] = [%d]\n", j, aux->n);
@@ -60,6 +61,6 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 size_t min(size_t first, size_t second)
 {
 	if (first < second)
-		return first;
-	return second;
+		return (first);
+	return (second);
 }
